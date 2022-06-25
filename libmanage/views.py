@@ -15,7 +15,7 @@ def library(request):
 
 def collection(request):
     all_books = Book.objects.all()
-    paginator = Paginator(all_books, 4)
+    paginator = Paginator(all_books, 6)
     page = request.GET.get('pg')
     all_books = paginator.get_page(page)
    
