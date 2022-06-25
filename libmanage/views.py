@@ -15,7 +15,7 @@ def library(request):
 
 def collection(request):
     all_books = Book.objects.all()
-    paginator = Paginator(all_books, 6)
+    paginator = Paginator(all_books, 8)
     page = request.GET.get('pg')
     all_books = paginator.get_page(page)
    
@@ -24,7 +24,7 @@ def collection(request):
 @login_required
 def home(request):
     all_books = Book.objects.all()
-    paginator = Paginator(all_books, 4)
+    paginator = Paginator(all_books, 6)
     page = request.GET.get('pg')
     all_books = paginator.get_page(page)
     return render (request, 'home.html', {'all_books': all_books})
