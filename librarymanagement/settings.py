@@ -14,7 +14,7 @@ SECRET_KEY = env('DJANGO_SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env('DJANGO_DEBUG')
 
-ALLOWED_HOSTS = [env('DJANGO_ALLOWED_HOST')]
+ALLOWED_HOSTS = [env('DJANGO_ALLOWED_HOSTS')]
 
 
 # Application definition
@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'libmanage',
     'users_app',
     'crispy_forms',
-    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -71,7 +70,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'library_management',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': env('DB_PASSWORD'),
         'HOST': 'localhost',  
         'PORT': '3306',
     }
