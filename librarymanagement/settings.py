@@ -23,7 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
-    'django.contrib.sessions',
+    'django.contrib.sessions', 
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'libmanage',
@@ -71,7 +71,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql', 
         'NAME': 'library_management',
         'USER': 'root',
-        'PASSWORD': 'harekrishna',
+        'PASSWORD': '',
         'HOST': 'localhost',  
         'PORT': '3306',
     }
